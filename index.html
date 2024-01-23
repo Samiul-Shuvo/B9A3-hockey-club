@@ -1,11 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey Club</title>
-</head>
-<body>
-    
-</body>
+    <!-- Tailwind and Daisy Ui CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts ManRope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Tailwind Colors -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': '#FF4240',
+              }
+            }
+          }
+        }
+      </script>
+    <!-- Custom Styles -->
+    <style>
+        .font-manrope{
+            font-family: 'Manrope', sans-serif;
+        }
+        hr.new2{
+            border-top: 1px dashed #13131833;
+        }
+        /* Font Awsome */
+        
+    </style>
+  </head>
+  <body class="font-manrope">
+    <header class="container mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a class="text-[#FF4240]">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl"
+              >Hockey<span class="text-[#FF4240]">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu text-base menu-horizontal px-1">
+              <li><a class="text-[#FF4240]">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end ">
+            <img class="hidden mr-6 lg:flex" src="Images/search.png" alt="">
+            <button class="btn px-4 bg-primary-color text-white">Get Ticket</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto""></main>
+    <section  class="rounded-lg container mx-auto ">
+        <!-- Carousel Sliding Banner -->
+        <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full  h-[60vh] bg-cover">
+             <img src="Images/1.png" class="w-screen" alt="">
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle bg-black text-white absolute lg:top-36">❮</a> 
+                <a href="#slide2" class="btn btn-circle  bg-black text-white absolute lg:top-36 right-0 lg:left-20">❯</a>
+              </div>
+            </div> 
+           
+            <div id="slide2" class="carousel-item relative w-full  h-[60vh] bg-cover">
+             <img src="Images/2.png" class="w-screen" alt="">
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle  bg-black text-white absolute lg:top-36">❮</a> 
+                <a href="#slide3" class="btn btn-circle bg-black text-white absolute right-0 lg:top-36 lg:left-20">❯</a>
+              </div>
+            </div> 
+           
+            <div id="slide3" class="carousel-item relative w-full  h-[60vh] bg-cover">
+             <img src="Images/3.png" class="w-screen" alt="">
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle  bg-black text-white absolute lg:top-36">❮</a> 
+                <a href="#slide4" class="btn btn-circle bg-black right-0 text-white absolute lg:top-36 lg:left-20">❯</a>
+              </div>
+            </div> 
+           
+            <div id="slide4" class="carousel-item relative w-full  h-[60vh] bg-cover">
+             <img src="Images/4.png" class="w-screen" alt="">
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle  bg-black text-white absolute lg:top-36">❮</a> 
+                <a href="#slide1" class="btn btn-circle bg-black right-0 text-white absolute lg:top-36 lg:left-20">❯</a>
+              </div>
+            </div> 
+           
+          </div>
+          <div class="p-8 w-auto  lg:w-2/4 flex-col  lg:-translate-y-48 lg:translate-x-64 bg-black	text-white mx-auto shadow-lg rounded-lg">
+            <h3 class="font-bold text-2xl		">Meet all the heroes from the field</h3>
+            <p class="text-[#FFFFFF99] py-2">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+          </div>
+    </section>
+    <!-- Professional Club -->
+    <hr class="new2 container mx-auto">
+
+    <section class=" container mx-auto flex flex-col justify-center ">
+        <div class="flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold pt-10">Professional Hockeys Club</h2>
+            <p class="text-center text-[#13131886] text-2xl py-2">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+        <hr class="new2 container my-10 mx-auto">
+
+        <!-- Progress Bar -->
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Prayer -->
+            <div class="flex flex-col items-center justify-center space-y-4 px-4 py-6">
+                <div class="radial-progress rotate-180 text-[red]" style="--value:87;" role="progressbar"><span class="rotate-180 text-black font-bold">87%</span></div>
+                <h3 class="font-semibold text-2xl">Prayer Facility</h3>
+                <p class="text-center text-[#13131863] text-xl py-2">Amet consectetur. Condimentum<br>dignissim adipiscing .</p>
+            </div>
+            <!-- coach -->
+            <div class="flex flex-col items-center justify-center space-y-4 px-4 py-6">
+                <div class="radial-progress rotate-180 text-[#49d292]" style="--value:95;" role="progressbar"><span class="rotate-180 text-black font-bold">95%</span></div>
+                <h3 class="font-semibold text-2xl">Experienced Coach</h3>
+                <p class="text-center text-xl text-[#13131863] py-2">Amet consectetur. Condimentum<br>dignissim adipiscing .</p>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-4 px-4 py-6">
+                <div class="radial-progress rotate-180 text-[#fcb547]" style="--value:90;" role="progressbar"><span class="rotate-180 text-black font-bold">90%</span></div>
+                <h3 class="font-semibold text-2xl">Senior Player</h3>
+                <p class="text-center text-xl text-[#13131863] py-2">Amet consectetur. Condimentum<br>dignissim adipiscing .</p>
+            </div>
+            <div class="flex flex-col items-center justify-center space-y-4 px-4 py-6">
+                <div class="radial-progress rotate-180 text-[#4c8df1]" style="--value:80;" role="progressbar"><span class="rotate-180 text-black font-bold">80%</span></div>
+                <h3 class="font-semibold text-2xl">Training Ground</h3>
+                <p class="text-center text-xl text-[#13131863] py-2">Amet consectetur. Condimentum<br>dignissim adipiscing .</p>
+            </div>
+        </div>
+        <hr class="new2 container my-10 mx-auto">
+    </section>
+    <!-- Program Section -->
+    <section class="container mx-auto">
+        <div class="flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold pt-10">Program Sections</h2>
+            <p class="text-center text-[#13131886] text-2xl py-2">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+        <hr class="new2 container my-10 mx-auto">
+        <!-- Program banner  -->
+        <!-- bg-[url(./Images/2.png)] h-full -->
+        <div class="container mx-auto p-4">
+            <div class="container mx-auto p-4">
+                <!-- card-1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2  gap-4">
+                  <div class="bg-cover w-full h-96 rounded-3xl bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./Images/2.png)]  items-start text-start pl-10 ">
+                     <h4 class="mt-32 mb-4 text-white font-semibold text-3xl">Junior Program</h4>
+                     <p class="text-white text-l mb-8">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+                        enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
+                     <button class="btn border-none px-4 bg-primary-color text-white">Register Now</button>
+
+                    </div>
+                     <!-- card-1 -->
+
+                     <div class="bg-cover w-full h-96 rounded-3xl bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./Images/3.png)]  items-start text-start pl-10 ">
+                        <h4 class="mt-32 mb-4 text-white font-semibold text-3xl">Junior Program</h4>
+                        <p class="text-white text-l mb-8">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+                           enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
+                        <button class="btn border-none px-4 bg-primary-color text-white">Register Now</button>
+   
+                       </div>
+                            <!-- card-1 -->
+                            <div class=" lg:col-span-2 bg-cover w-full h-96 rounded-3xl bg-[linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./Images/4.png)]  items-end text-start pl-10 ">
+                                <h4 class=" mt-32 lg:mt-48 mb-4 text-white font-semibold text-3xl">Junior Program</h4>
+                                <p class="text-white text-l mb-8">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
+                                   enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
+                                <button class="btn border-none px-4 bg-primary-color text-white">Register Now</button>
+                            </div>
+                </div>
+              </div>
+          </div>
+          <hr class="new2 container my-10 mx-auto">
+
+    </section>
+    <!-- Our New Products -->
+    <section class="container mx-auto">
+        <div class="flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold pt-10">Program Sections</h2>
+            <p class="text-center text-[#13131886] text-2xl py-2">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </div>
+        <hr class="new2 container my-10 mx-auto">
+        <!-- Grid Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="card lg:card-side bg-base-100 shadow-xl">
+                <figure class="p-3">
+                 <img src="Images/5.png" alt=""/>
+                </figure>
+                <div class="card-body">
+                    <div>
+
+                    </div>
+                  <h2 class="card-title">New album is released!</h2>
+                  <p>Click the button to listen on Spotiwhy app.</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Listen</button>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </section>
+    <footer>
+       
+    </footer>
+  </body>
 </html>
